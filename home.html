@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Our Story ❤️</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    /* Destiny title at top */
+/* Intro slide */
+.intro-container {
+    text-align: center;
+    animation: fadeIn 2s ease;
+}
+
+.intro-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 64px;
+    color: #f4517c;
+    margin-bottom: 10px;
+}
+
+.intro-sub {
+    font-size: 34px;
+    color: #d7466f;
+    opacity: 0.9;
+}
+
+/* Destiny title */
+.destiny-title {
+    position: absolute;
+    top: 100px;     /* move down */
+    left: 10%;     /* move left */
+    transform: translateX(-50%);
+    font-family: 'Great Vibes', cursive;
+}
+
+
+/* Container */
+.destiny-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Image blocks */
+.destiny-item { 
+    position: absolute;
+    width: 180px;
+    text-align: center;
+    animation: zoomIn 2s ease;
+}
+
+.destiny-item img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Caption under image */
+.caption {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #05a15e;
+    animation: fadeIn 2s ease forwards;
+}
+
+/* Positions */
+.left-img { top: 35%; left: 5%; }
+.random1 { bottom: 5%; right: 10%; }
+.random2 { top: 10%; right: 10%; }
+
+/* Center text */
+.destiny-text {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.destiny-text p {
+    color: #28aaca;
+    font-size: 20px;
+    margin: 5px 0;
+}
+/* Title */
+.valentine-title {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+}
+
+/* Container */
+.zigzag-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Love boxes */
+.love-box {
+    position: absolute;
+    width: 260px;
+    padding: 20px;
+    background: #ffb6c1;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    color: #fff;
+    font-size: 17px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif; /* clearer font */
+    animation: fadeInUp 2s ease forwards, floatBox 5s ease-in-out infinite;
+}
+
+/* Zigzag positions (fixed overlap) */
+.box1 { top: 25%; left: 8%; }
+.box2 { top: 50%; right: 10%; }
+.box3 { bottom: 12%; left: 25%; }
+
+/* Floating animation */
+@keyframes floatBox {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+/* Fade animation */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Emoji background */
+.emoji-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.emoji-bg span {
+    position: absolute;
+    font-size: 24px;
+    opacity: 0.25; /* faded look */
+    animation: floatEmoji 12s linear infinite;
+}
+
+/* Random emoji positions */
+.emoji-bg span:nth-child(1) { left: 5%; bottom: 0; animation-delay: 0s; }
+.emoji-bg span:nth-child(2) { left: 20%; bottom: -20px; animation-delay: 2s; }
+.emoji-bg span:nth-child(3) { left: 40%; bottom: -10px; animation-delay: 4s; }
+.emoji-bg span:nth-child(4) { left: 60%; bottom: -15px; animation-delay: 1s; }
+.emoji-bg span:nth-child(5) { left: 75%; bottom: -20px; animation-delay: 3s; }
+.emoji-bg span:nth-child(6) { left: 90%; bottom: -10px; animation-delay: 5s; }
+
+@keyframes floatEmoji {
+    from { transform: translateY(0); }
+    to { transform: translateY(-110vh); }
+}
+
+
+
+
+/* Creative pink love card */
+.love-card {
+    background: linear-gradient(135deg, #ff9eb5, #ffc1cc);
+    padding: 40px 30px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    text-align: center;
+    max-width: 700px;
+    position: relative;
+    animation: fadeIn 2s ease;
+}
+
+/* Romantic text */
+.final-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 38px;
+    color: #f35a8b;
+    line-height: 1.5;
+}
+
+/* Buttons container */
+.buttons {
+    margin-top: 30px;
+}
+
+/* Creative buttons */
+button {
+    padding: 12px 28px;
+    margin: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* YES button */
+.yes-btn {
+    background: #f49fbc;
+    color: #ff4081;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    
+}
+
+.yes-btn:hover {
+    transform: scale(1.1);
+    background: #e91e63;
+}
+
+/* NO button playful */
+.no-btn {
+    background: #f49fbc;
+    color: #ff4081;
+    position: relative;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+/* Emoji background container */
+.emoji-bg-final {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Emoji style */
+.emoji-bg-final span {
+    position: absolute;
+    font-size: 28px;
+    opacity: 0.25;
+    animation: floatUpFinal 12s linear infinite;
+}
+
+/* Random starting positions */
+.emoji-bg-final span:nth-child(1) { left: 5%; bottom: -30px; animation-delay: 0s; }
+.emoji-bg-final span:nth-child(2) { left: 20%; bottom: -40px; animation-delay: 2s; }
+.emoji-bg-final span:nth-child(3) { left: 35%; bottom: -20px; animation-delay: 4s; }
+.emoji-bg-final span:nth-child(4) { left: 50%; bottom: -50px; animation-delay: 1s; }
+.emoji-bg-final span:nth-child(5) { left: 65%; bottom: -30px; animation-delay: 3s; }
+.emoji-bg-final span:nth-child(6) { left: 78%; bottom: -25px; animation-delay: 5s; }
+.emoji-bg-final span:nth-child(7) { left: 90%; bottom: -40px; animation-delay: 6s; }
+.emoji-bg-final span:nth-child(8) { left: 95%; bottom: -15px; animation-delay: 2.5s; }
+
+/* Animation */
+@keyframes floatUpFinal {
+    from {
+        transform: translateY(0);
+        opacity: 0.25;
+    }
+    to {
+        transform: translateY(-120vh);
+        opacity: 0;
+    }
+}
+/* Video container */
+.video-container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 15px rgba(0,0,0,0.3);
+}
+
+/* Video styling */
+video {
+    width: 250vw;
+    max-width: 250px;
+    border-radius: 15px;
+}
+/* Floating emoji background (reusable) */
+.emoji-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.emoji-bg span {
+    position: absolute;
+    font-size: 26px;
+    opacity: 0.25;
+    animation: floatEmoji 12s linear infinite;
+}
+
+/* Random positions */
+.emoji-bg span:nth-child(1) { left: 5%; bottom: -30px; animation-delay: 0s; }
+.emoji-bg span:nth-child(2) { left: 18%; bottom: -40px; animation-delay: 2s; }
+.emoji-bg span:nth-child(3) { left: 35%; bottom: -20px; animation-delay: 4s; }
+.emoji-bg span:nth-child(4) { left: 50%; bottom: -50px; animation-delay: 1s; }
+.emoji-bg span:nth-child(5) { left: 65%; bottom: -30px; animation-delay: 3s; }
+.emoji-bg span:nth-child(6) { left: 80%; bottom: -25px; animation-delay: 5s; }
+.emoji-bg span:nth-child(7) { left: 92%; bottom: -15px; animation-delay: 6s; }
+
+@keyframes floatEmoji {
+    from {
+        transform: translateY(0);
+        opacity: 0.25;
+    }
+    to {
+        transform: translateY(-120vh);
+        opacity: 0;
+    }
+}
+
+
+
+
+    .slide {
+        display: none;
+        height: 100vh;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .active {
+        display: flex;
+    }
+
+    /* Backgrounds */
+    .bg1 { background: linear-gradient(to right, #ff9a9e, #fad0c4); }
+    .bg2 { background: linear-gradient(to right, #a18cd1, #fbc2eb); }
+    .bg3 { background: linear-gradient(to right, #f6d365, #fda085); }
+    .bg4 { background: linear-gradient(to right, #84fab0, #8fd3f4); }
+    .bg5 { background: linear-gradient(to right, #fccb90, #d57eeb); }
+    .bg6 { background: linear-gradient(to right, #ff758c, #ff7eb3); }
+
+    /* Elegant headings */
+    h1 {
+        font-family: 'Great Vibes', cursive;
+        font-size: 48px;
+        color: #c0295b;
+        margin: 10px 0;
+        opacity: 0;
+        animation: fadeIn 1.5s ease forwards;
+    }
+    h3{
+        font-family: 'Great Vibes', cursive;
+        font-size: 30px;
+        color:#127a94;
+        margin: 10px 0;
+        opacity: 0;
+        animation: fadeIn 1.5s ease forwards;
+    }
+
+    h2, p {
+        color: #c0295b;
+        opacity: 0;
+        animation: fadeIn 2s ease forwards;
+    }
+
+    /* Hero layout (Slide 1) */
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+        width: 90%;
+    }
+    .left-image {
+    flex: 1;
+    }
+
+    /* Image zoom effect */
+    .left-image img {
+        width: 100%;
+        max-width: 350px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        animation: zoomIn 2s ease;
+    }
+
+    /* Text alignment */
+    .hero-text {
+        max-width: 500px;
+        text-align: left;
+    }
+
+    /* Floating hearts & kisses */
+    .floating {
+        position: absolute;
+        bottom: -20px;
+        font-size: 24px;
+        animation: floatUp 6s linear infinite;
+        opacity: 0.8;
+    }
+
+    .floating:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .floating:nth-child(2) { left: 30%; animation-delay: 2s; }
+    .floating:nth-child(3) { left: 50%; animation-delay: 4s; }
+    .floating:nth-child(4) { left: 70%; animation-delay: 1s; }
+    .floating:nth-child(5) { left: 90%; animation-delay: 3s; }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+        from { transform: scale(0.8); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes floatUp {
+        from { transform: translateY(0); opacity: 0.8; }
+        to { transform: translateY(-110vh); opacity: 0; }
+    }
+
+    .hint {
+        position: absolute;
+        bottom: 15px;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        color: #bb2e64;
+    }
+    /* Image zoom animation */
+.zoom-img {
+    animation: zoomIn 2s ease forwards;
+}
+
+/* Text fade animation */
+.fade-text {
+    opacity: 0;
+    animation: fadeInUp 1.5s ease forwards;
+}
+
+/* Delay each line */
+.fade-text:nth-child(1) { animation-delay: 0.5s; }
+.fade-text:nth-child(2) { animation-delay: 1s; }
+.fade-text:nth-child(3) { animation-delay: 1.5s; }
+
+/* Animations */
+@keyframes zoomIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+    
+</style>
+</head>
+
+<body onclick="nextSlide()">
+<audio id="bgMusic" loop>
+    <source src="assets/song.mp3" type="audio/mpeg">
+</audio>
+
+Floating hearts & kisses (appear on all slides)
+<div class="floating">❤️</div>
+<div class="floating">💋</div>
+<div class="floating">💕</div>
+<div class="floating">😘</div>
+<div class="floating">💖</div>
+
+<div class="slide bg1 active">
+
+    <!--Floating emoji background -->
+    <div class="emoji-bg-final">
+        <span>❤️</span>
+        <span>💋</span>
+        <span>💕</span>
+        <span>😘</span>
+        <span>💖</span>
+    </div>
+
+    <div class="intro-container">
+        <h1 class="intro-text">Hi Mama 💖</h1>
+        <h3 class="intro-sub">Happy Valentines Day</h3>
+    </div>
+
+    <div class="hint">Click anywhere to continue ➜</div>
+</div>
+
+
+<!-- ================= Slide 1 ================= -->
+<!-- ================= Slide 2 (Image Intro) ================= -->
+<div class="slide bg1">
+    <div class="emoji-bg">
+    <span>❤️</span>
+    <span>💋</span>
+    <span>💕</span>
+    <span>😘</span>
+    <span>💖</span>
+    <span>🤗</span>
+    <span>♾️</span>
+</div>
+
+
+    <div class="hero">
+
+        <!-- Left Image -->
+        <div class="left-image">
+            <img src="assets/me.jpg" alt="My Photo" class="zoom-img">
+        </div>
+
+        <!-- Right Text -->
+        <div class="hero-text">
+            <h1 class="fade-text">Ennavanae ❤️</h1>
+            <h1 class="fade-text">This is something for you..</h1>
+            <h1 class="fade-text">for en uyirae~~~</h1>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= Slide 2 ================= -->
+<div class="slide bg2">
+    <div class="emoji-bg">
+    <span>❤️</span>
+    <span>💋</span>
+    <span>💕</span>
+    <span>😘</span>
+    <span>💖</span>
+    <span>🤗</span>
+    <span>♾️</span>
+</div>
+
+    <div>
+        <h1>Our Love🫠</h1>
+        <p>I never dreamed a love like ours would come true, yet here we are — still holding on to each other through everything. We’ve faced so much, and there is still so much life waiting for us.
+
+There were moments when life felt too heavy and I thought about walking away… but my heart never left you. It never could. I don’t know what this force is that keeps us together, but I know it is our love — unbreakable, binding our souls no matter how hard life tries to test us.
+</p>
+        <p>Among a million choices, My soul, body, heart and my Everything - will choose only on thing : YOU</p>
+        <h2>It's just you🫂</h2>
+    </div>
+</div>
+
+<!-- ================= Slide 3 ================= -->
+<div class="slide bg3">
+    <div class="emoji-bg">
+    <span>❤️</span>
+    <span>💋</span>
+    <span>💕</span>
+    <span>😘</span>
+    <span>💖</span>
+    <span>🤗</span>
+    <span>♾️</span>
+</div>
+
+    <div>
+        <h1>You made me❤️</h1>
+       
+
+<p>You made me laugh, like I have never did in my whole life.</p>
+<p>You made me cry, and in those tears, I could only feel your love.</p>
+<p>You made me shy, with every word spilling out of you.</p>
+<p>You made me crazy, pouring out the love of your life.</p>
+
+<p>You made me brave, when fear built walls around my soul.</p>
+<p>You made me soft, in a way I never knew I could be.</p>
+
+<p>You made me believe, This isn't just a love, It's our Destiny.</p>
+<p>You made me feel safe, like I had finally found the place my heart calls home.</p>
+
+<p>You made me stronger, by standing beside me through every storm.</p>
+<p>You made me whole, your presence filling the empty spaces inside me.</p>
+
+<p>And if I am anything beautiful today,</p>
+<p>it is because, in ways words cannot hold </p>
+<p>- YOU MADE ME.
+</p>
+</p>
+        <p>You are my backbone..you made me feel complete🫂</p>
+    </div>
+</div>
+
+<!-- ================= Slide 4 ================= -->
+<!-- ================= Slide 4 ================= -->
+<div class="slide bg4">
+    <div class="emoji-bg">
+    <span>❤️</span>
+    <span>💋</span>
+    <span>💕</span>
+    <span>😘</span>
+    <span>💖</span>
+    <span>🤗</span>
+    <span>♾️</span>
+</div>
+
+
+    <!-- Title at Top -->
+    <h1 class="destiny-title">Our Destiny ✨</h1>
+
+    <div class="destiny-container">
+
+        <!-- Image 1 -->
+        <div class="destiny-item left-img">
+            <img src="assets/destiny1.jpg" alt="Memory 1">
+            <p class="caption">From strangers to soulmates 💫</p>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="destiny-item random1">
+            <img src="assets/destiny2.jpg" alt="Memory 2">
+            <p class="caption">Every step led me to you ❤️</p>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="destiny-item random2">
+            <img src="assets/destiny3.jpg" alt="Memory 3">
+            <p class="caption">Our paths were meant to cross ✨</p>
+        </div>
+
+        <!-- Center Text -->
+        <div class="destiny-text">
+            <h3>No matter where life takes us,</h3>
+            <h3>I believe we were always meant</h3>
+            <h3>to find each other like ❤️</h3>
+            <h3>we already do</h3>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= Slide 5 ================= -->
+<div class="slide bg5">
+
+    <h1 class="valentine-title">❤️♾️</h1>
+
+    <!-- Floating hearts & kisses background -->
+    <div class="emoji-bg">
+        <span>❤️</span>
+        <span>💋</span>
+        <span>💕</span>
+        <span>😘</span>
+        <span>💖</span>
+        <span>💗</span>
+    </div>
+
+    <div class="zigzag-container">
+
+        <!-- Box 1 -->
+        <div class="love-box box1">
+            Your love is the light that turns my ordinary days into magical memories.
+        </div>
+
+        <!-- Box 2 -->
+        <div class="love-box box2">
+            Your beauty is not just in your smile, but in the kindness your heart holds.
+        </div>
+
+        <!-- Box 3 -->
+        <div class="love-box box3">
+            In your eyes, I found my home, my peace, and my forever.
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= Slide 6 ================= -->
+<!-- ================= Slide 6 ================= -->
+<div class="slide bg6">
+
+    <!-- Floating emoji background -->
+    <div class="emoji-bg-final">
+        <span>❤️</span>
+        <span>💋</span>
+        <span>♾️</span>
+        <span>🤗</span>
+        <span>💕</span>
+        <span>💖</span>
+        <span>😘</span>
+        <span>💞</span>
+    </div>
+
+    <div class="love-card">
+
+        <h1 class="final-text">
+            The most beautiful days of my life are the ones spent with you.<br>
+            I want this love to last forever…<br>
+            Will you be my Valentine, my Ennavan, my Uyir — today, tomorrow, and always?
+        </h1>
+
+        <div class="buttons">
+            <button class="yes-btn" onclick="showVideoSlide()">YES 💖</button>
+            <button class="no-btn" id="noBtn">NO 💔</button>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= Slide 7 ================= -->
+<div class="slide bg6" id="videoSlide">
+    <div class="emoji-bg">
+    <span>❤️</span>
+    <span>💋</span>
+    <span>💕</span>
+    <span>😘</span>
+    <span>💖</span>
+    <span>🤗</span>
+    <span>♾️</span>
+</div>
+
+
+    <div class="video-container">
+        <video id="finalVideo" controls autoplay muted>
+            <source src="assets/love.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="hint">Happy Valentines Day Ennavanae ❤️</div>
+</div>
+
+<script>
+let musicStarted = false;
+
+document.addEventListener("click", () => {
+    const music = document.getElementById("bgMusic");
+
+    if (!musicStarted && music) {
+        music.volume = 0.3; // softer romantic volume
+        music.play();
+        musicStarted = true;
+    }
+    music.volume = 0;
+music.play();
+
+let vol = 0;
+const fade = setInterval(() => {
+    if (vol < 0.4) {
+        vol += 0.05;
+        music.volume = vol;
+    } else {
+        clearInterval(fade);
+    }
+}, 200);
+
+});
+</script>
+
+<!--<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function nextSlide() {
+        slides[currentSlide].classList.remove("active");
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add("active");
+    }
+</script>-->
+    <!-- Your existing slide script -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".slide");
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove("active");
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add("active");
+        }
+    </script>
+
+    <!-- ✅ ADD THIS NEW SCRIPT BELOW -->
+    <script>
+        const noBtn = document.getElementById("noBtn");
+
+        if (noBtn) {
+            document.addEventListener("mousemove", (e) => {
+                const rect = noBtn.getBoundingClientRect();
+                const distance = Math.hypot(
+                    e.clientX - (rect.left + rect.width / 2),
+                    e.clientY - (rect.top + rect.height / 2)
+                );
+
+                if (distance < 120) {
+                    const x = Math.random() * 200 - 100;
+                    const y = Math.random() * 100 - 50;
+                    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+                }
+            });
+        }
+</script>
+<script>
+function showVideoSlide() {
+    const slides = document.querySelectorAll(".slide");
+
+    // Hide all slides
+    slides.forEach(slide => slide.classList.remove("active"));
+
+    // Show video slide
+    document.getElementById("videoSlide").classList.add("active");
+
+    const video = document.getElementById("finalVideo");
+    const music = document.getElementById("bgMusic");
+
+    // ▶️ Play video with sound
+    if (video) {
+        video.muted = false;
+        video.play();
+    }
+
+    // ⏸ Pause background music
+    if (music) {
+        music.pause();
+    }
+}
+
+</script>
+<script>
+        function yesClicked() {
+            alert("You just made me the happiest person alive ❤️");
+        }
+    </script>
+    
+
+</body>
+</html>
